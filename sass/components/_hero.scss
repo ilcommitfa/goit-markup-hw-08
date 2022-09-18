@@ -1,0 +1,222 @@
+.section-hero {
+    background-color: $secondary-bgc;
+    margin: 0;
+    padding: 200px 0;
+    text-align: center;
+    height: 600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img.jpg");
+}
+
+.hero-title {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+}
+
+.hero-btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    margin: 0;
+    border-radius: 4px;
+    min-width: 216px;
+    min-height: 50px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: background-color $animation, box-shadow $animation;
+&:hover, &:focus {
+    background-color: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $animation;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    min-height: 581px;
+    background-color: $primary-white-color;
+
+    padding: 40px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animation;
+}
+
+.btn-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: $primary-white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: fill $animation;
+&:hover, &:focus {
+    fill: $accent-color;
+    }
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.modal-input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    caret-color: $accent-color;
+    padding: 0 0 0 42px;
+    transition: fill $animation, border-color $animation;
+&:hover, &:focus {
+    border-color: $accent-color;
+    }
+}
+
+.modal-input.textarea {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.modal-input::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-label {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+    margin-bottom: 4px;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill $animation;
+.modal-input:hover ~ &,
+.modal-input:focus ~ & {
+    fill: $accent-color;
+    }
+}
+
+.input-icon-thumb {
+    position: relative;
+}
+
+.input-icon-thumb:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.btn-modal-submit {
+    display: block;
+    height: 50px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 52px;
+    margin: 30px auto auto;
+    transition: background-color $animation;
+&:hover {
+    background-color: #188CE8;
+    }
+}
+
+.checkbox-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+}
+
+.checkbox-text.policy {
+    text-decoration-line: underline;
+    color: $accent-color;
+}
+
+.checkbox {
+    appearance: none;
+    margin-left: 35px;
+}
+
+.checkbox-label {
+    position: relative;
+}
+
+.icon-checkbox {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 16px;
+    height: 15px;
+    fill: $primary-white-color;
+    border: 2px solid $main-color;
+    border-radius: 2px;
+    transform: translateY(-50%);
+    transition: fill $animation, background-color $animation, border-color $animation;
+.checkbox:checked:focus + & {
+    fill: $accent-color;
+    background-color: $accent-color;
+    border-color: $accent-color;
+    }
+}

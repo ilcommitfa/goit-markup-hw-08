@@ -1,0 +1,33 @@
+.benefits-list {
+    display: flex;
+    gap: 30px;
+}
+
+.benefits-list-item {
+    flex-basis: calc((100% - 90px)/4);
+}
+
+.benefits-title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.benefits-item {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+}
+
+.benefits-thumb {
+    margin-bottom: 30px;
+    border-radius: 4px;
+    height: 120px;
+    background-color: $secondary-bgc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

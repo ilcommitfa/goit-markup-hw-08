@@ -1,0 +1,35 @@
+.clients-title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+}
+
+.clients-list li {
+    flex-basis: calc((100% - 150px)/4);
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AFB1B8;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: color $animation, border $animation;
+&:hover, &:focus {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    }
+}
+
+.icon-clients {
+    fill: currentColor;
+}
