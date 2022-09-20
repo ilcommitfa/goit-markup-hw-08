@@ -74,13 +74,16 @@
     top: 50%;
     left: 50%;
     width: 528px;
-    min-height: 581px;
     background-color: $primary-white-color;
 
     padding: 40px;
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform $animation;
+
+    @media screen and (max-width: 767px) {
+        width: 450px;
+    }
 }
 
 .btn-modal-close {
@@ -196,6 +199,11 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $secondary-color;
+
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+        line-height: 1.16;    
+    }
 }
 
 .checkbox-text.policy {
@@ -206,6 +214,10 @@
 .checkbox {
     appearance: none;
     margin-left: 35px;
+
+    @media screen and (max-width: 1199px) {
+        margin-left: 23px;
+    }
 }
 
 .checkbox-label {
@@ -227,5 +239,9 @@
     fill: $accent-color;
     background-color: $accent-color;
     border-color: $accent-color;
+    }
+
+    @media screen and (max-width: 1199px) {
+        left: 0;
     }
 }

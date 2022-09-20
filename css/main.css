@@ -70,8 +70,8 @@ h1, h2, h3, h4, p, ul {
 
 .logo {
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #000000;
 }
@@ -80,6 +80,12 @@ h1, h2, h3, h4, p, ul {
   color: #FFFFFF;
   margin-right: 0;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 
 .logo-start {
   color: #2196F3;
@@ -87,9 +93,15 @@ h1, h2, h3, h4, p, ul {
 
 header {
   border-bottom: 1px solid #ECECEC;
-  position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .container-header {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 @media screen and (min-width: 768px) {
   .container-header {
     display: -webkit-box;
@@ -100,6 +112,7 @@ header {
             align-items: center;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .site-nav-link {
     font-weight: 500;
@@ -163,6 +176,16 @@ header {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .site-nav {
     display: -webkit-box;
@@ -205,6 +228,12 @@ header {
   border: none;
   background-color: transparent;
   margin-left: auto;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu-button .icon-menu-close {
@@ -222,7 +251,7 @@ header {
 .menu-container {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 48px 0 48px 40px;
@@ -234,21 +263,28 @@ header {
 .menu-container.is-open {
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .menu-container.is-open {
+    display: none;
+  }
+}
 
-.mobile-nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 32px;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  margin-bottom: 306px;
+@media screen and (max-width: 767px) {
+  .mobile-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 300px;
+  }
 }
 
 .mobile-contacts-list {
@@ -263,11 +299,15 @@ header {
   margin-bottom: 64px;
 }
 
-.mobile-contacts-link li:first-of-type {
+.mobile-contacts-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   color: #2196F3;
 }
 
-.mobile-contacts-link {
+.mobile-contacts-email {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -371,7 +411,6 @@ header {
   top: 50%;
   left: 50%;
   width: 528px;
-  min-height: 581px;
   background-color: #FFFFFF;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -380,6 +419,11 @@ header {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 .btn-modal-close {
@@ -538,6 +582,12 @@ header {
   letter-spacing: 0.03em;
   color: #757575;
 }
+@media screen and (max-width: 767px) {
+  .checkbox-text {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
 
 .checkbox-text.policy {
   -webkit-text-decoration-line: underline;
@@ -550,6 +600,11 @@ header {
      -moz-appearance: none;
           appearance: none;
   margin-left: 35px;
+}
+@media screen and (max-width: 1199px) {
+  .checkbox {
+    margin-left: 23px;
+  }
 }
 
 .checkbox-label {
@@ -574,6 +629,11 @@ header {
   fill: #2196F3;
   background-color: #2196F3;
   border-color: #2196F3;
+}
+@media screen and (max-width: 1199px) {
+  .icon-checkbox {
+    left: 0;
+  }
 }
 
 .benefits-list {
@@ -840,11 +900,9 @@ header {
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 480px) {
-  .clients-list li {
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
-  }
+.clients-list li {
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .clients-list li {
@@ -985,7 +1043,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  min-width: 200px;
+  width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -1006,8 +1064,8 @@ header {
 }
 
 .subscribe-input {
-  min-width: 358px;
-  height: 100%;
+  width: 358px;
+  height: 50px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1018,12 +1076,29 @@ header {
   padding: 0;
   padding-left: 16px;
 }
+@media screen and (max-width: 1199px) {
+  .subscribe-input {
+    width: 450px;
+  }
+}
 
 .subscribe-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+}
+@media screen and (max-width: 767px) {
+  .subscribe-thumb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
 }
 
 .btn {

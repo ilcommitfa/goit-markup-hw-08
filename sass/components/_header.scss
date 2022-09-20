@@ -1,12 +1,16 @@
 header {
     border-bottom: 1px solid #ECECEC;
-    position: relative;
+    
 }
-
-@media screen and (min-width: 768px) {
 .container-header {
-    display: flex;
-    align-items: center;
+    @media screen and (max-width: 767px) {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -68,6 +72,11 @@ header {
 }
 
 .site-nav {
+    @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+    }
+
     @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
@@ -100,6 +109,11 @@ header {
     border: none;
     background-color: transparent;
     margin-left: auto;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .menu-button .icon-menu-close {
@@ -117,7 +131,7 @@ header {
 .menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 48px 0 48px 40px;
@@ -128,19 +142,24 @@ header {
 
     &.is-open {
         display: block;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 }
 
 .mobile-nav-list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 306px;
-}
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        margin-bottom: 300px;
+    }
+}  
 
 .mobile-contacts-list {
     display: flex;
@@ -149,11 +168,15 @@ header {
     margin-bottom: 64px;
 }
 
- .mobile-contacts-link li:first-of-type {
-     color: $accent-color;
+ .mobile-contacts-phone {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $accent-color;
  }
 
-.mobile-contacts-link {
+.mobile-contacts-email {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.16;
