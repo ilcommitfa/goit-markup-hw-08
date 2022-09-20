@@ -87,6 +87,7 @@ h1, h2, h3, h4, p, ul {
 
 header {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -99,6 +100,102 @@ header {
             align-items: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .site-nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    display: block;
+    padding: 32px 0;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav-link:hover, .site-nav-link:focus {
+    color: #2196F3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .active {
+    color: #2196F3;
+    position: relative;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav li {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 10px;
+    vertical-align: middle;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-address:hover, .header-address:focus {
+    color: #2196F3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .site-nav-list {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+    margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav-list.contacts {
+    margin-left: auto;
+    gap: 30px;
+  }
+}
+
 .menu-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -120,6 +217,74 @@ header {
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 48px 0 48px 40px;
+  color: #212121;
+  background-color: #FFFFFF;
+  text-align: left;
+  outline: 1px solid tomato;
+}
+.menu-container.is-open {
+  display: block;
+}
+
+.mobile-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 306px;
+}
+
+.mobile-contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.mobile-contacts-link li:first-of-type {
+  color: #2196F3;
+}
+
+.mobile-contacts-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 
 .section-hero {
@@ -780,14 +945,33 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+}
+@media screen and (max-width: 1199px) {
+  .footer-menu {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-menu {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
-.join-us-container {
-  margin-left: 70px;
-  margin-right: auto;
+@media screen and (min-width: 1200px) {
+  .join-us-container {
+    margin-left: 70px;
+    margin-right: auto;
+  }
 }
 
 .btn-subscribe {

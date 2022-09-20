@@ -53,12 +53,24 @@
 
 .footer-menu {
     display: flex;
-    align-items: baseline;
+    
+    @media screen and (max-width: 1199px) {
+        align-items: center;
+        gap: 60px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        align-items: baseline;
+    }
 }
 
 .join-us-container {
+    @media screen and (min-width: 1200px) {
     margin-left: 70px;
     margin-right: auto;
+    }
 }
 
 .btn-subscribe {

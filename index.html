@@ -25,12 +25,51 @@
       <div class="container container-header">
         <nav class="site-nav">
           <a class="logo" href="./"><span class="logo-start">Web</span>Studio</a>
-          <button type="button" class="menu-button is-open js-menu-container">
-            <svg width="40" height="40">
+          <button type="button" class="menu-button is-open js-open-menu" aria-expanded="false" aria-controls="menu-container">
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
               <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
               <use class="icon-menu-close" href="./images/icons.svg#icon-menu-close"></use>
             </svg>
           </button>
+          <div class="menu-container is-open js-menu-container" id="menu-container">
+            <ul class="mobile-nav-list">
+              <li><a class="mobile-nav-link active" href="">Студія</a></li>
+              <li><a class="mobile-nav-link" href="./portfolio.html">Портфоліо</a></li>
+              <li><a class="mobile-nav-link" href="">Контакти</a></li>
+            </ul>
+            <ul class="mobile-contacts-list">
+              <li>
+                <a class="mobile-contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li>
+                <a class="mobile-contacts-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-social-list">
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
           <ul class="site-nav-list">
             <li><a class="site-nav-link active" href="">Студія</a></li>
             <li><a class="site-nav-link" href="./portfolio.html">Портфоліо</a></li>
