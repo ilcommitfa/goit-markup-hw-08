@@ -11,14 +11,14 @@ header {
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 }
 
 .site-nav-link {
-    @media screen and (min-width: 1200px) {
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.62;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     display: block;
     padding: 32px 0;
@@ -26,7 +26,6 @@ header {
 &:hover, &:focus {
     color: $accent-color;
     }
-}
 }
 
 .active {
@@ -54,10 +53,9 @@ header {
 }
 
 .header-address {
-    @media screen and (min-width: 1200px) {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     color: $secondary-color;
     display: inline-flex;
@@ -67,19 +65,23 @@ header {
     transition: color $animation;
 &:hover, &:focus {
     color: $accent-color;
-    }
 }
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.14;
+}
+}
+
+.icon-address {
+    fill: currentColor;
 }
 
 .site-nav {
-    @media screen and (max-width: 767px) {
-        display: flex;
-        align-items: center;
-    }
-
-    @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        gap: 87px;
     }
 }
 
@@ -88,18 +90,25 @@ header {
         display: none;
     }
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 50px;
+    }
+
     @media screen and (min-width: 1200px) {
-    display: flex;
-    gap: 50px;
-    margin-left: 93px;
+        margin-left: 93px;
     }
 }
 
 .site-nav-list.contacts {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     @media screen and (min-width: 1200px) {
-    margin-left: auto;
-    gap: 30px;
-}
+        gap: 30px;
+    }
 }
 
 .menu-button {
