@@ -130,11 +130,11 @@ header {
   color: #2196F3;
 }
 
+.active {
+  color: #2196F3;
+  position: relative;
+}
 @media screen and (min-width: 1200px) {
-  .active {
-    color: #2196F3;
-    position: relative;
-  }
   .active::after {
     content: "";
     position: absolute;
