@@ -57,12 +57,26 @@
     @media screen and (max-width: 1199px) {
         align-items: center;
         gap: 60px;
-        flex-direction: column;
         text-align: center;
+        
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
+        
+        @media screen and (min-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 768px) {
         align-items: baseline;
+    }
+}
+
+.footer-menu form {
+    @media screen and (max-width: 767px) {
+        width: 100%;
     }
 }
 
@@ -110,6 +124,9 @@
     padding: 0;
     padding-left: 16px;
 
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
     @media screen and (max-width: 1199px) {
         width: 450px;
     }
@@ -119,9 +136,15 @@
     display: flex;
     gap: 12px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+}
+
+.subscribe-label {
+    @media screen and (max-width: 767px) {
+        width: 100%;
     }
 }

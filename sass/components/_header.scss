@@ -168,6 +168,12 @@ header {
     margin-bottom: 64px;
 }
 
+.mobile-nav-link {
+    &.active {
+        color: $accent-color;
+    }
+}
+
  .mobile-contacts-phone {
     font-weight: 500;
     font-size: 34px;

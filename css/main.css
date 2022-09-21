@@ -299,6 +299,10 @@ header {
   margin-bottom: 64px;
 }
 
+.mobile-nav-link.active {
+  color: #2196F3;
+}
+
 .mobile-contacts-phone {
   font-weight: 500;
   font-size: 34px;
@@ -1015,18 +1019,37 @@ header {
         -ms-flex-align: center;
             align-items: center;
     gap: 60px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1199px) and (max-width: 767px) {
+  .footer-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .footer-menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer-menu {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-menu form {
+    width: 100%;
   }
 }
 
@@ -1081,6 +1104,11 @@ header {
   padding: 0;
   padding-left: 16px;
 }
+@media screen and (max-width: 767px) {
+  .subscribe-input {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1199px) {
   .subscribe-input {
     width: 450px;
@@ -1093,7 +1121,7 @@ header {
   display: flex;
   gap: 12px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .subscribe-thumb {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1103,6 +1131,12 @@ header {
         -ms-flex-align: center;
             align-items: center;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .subscribe-label {
+    width: 100%;
   }
 }
 
