@@ -631,7 +631,7 @@ header {
   letter-spacing: 0.03em;
   color: #757575;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .checkbox-text {
     font-size: 12px;
     line-height: 1.16;
