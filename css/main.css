@@ -425,6 +425,7 @@ header {
 @media screen and (max-width: 767px) {
   .backdrop {
     padding: 93px 15px;
+    overflow-y: scroll;
   }
 }
 
