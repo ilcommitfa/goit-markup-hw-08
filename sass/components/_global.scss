@@ -2,10 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: $main-color;
     background-color: $primary-white-color;
-
-    @media screen and (max-width: 767px) {
-        position: fixed;
-    }
 }
 
 li {
