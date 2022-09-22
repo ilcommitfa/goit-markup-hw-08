@@ -58,8 +58,7 @@
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity $animation;
-    overflow-y: scroll;
-
+    
     @media screen and (max-width: 767px) {
         padding: 93px 15px;
         overflow-y: scroll;
