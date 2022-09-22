@@ -136,6 +136,7 @@ header {
     background-color: $primary-white-color;
     transform: translateX(100%);
     transition: transform $animation;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
         display: none;
