@@ -241,16 +241,18 @@ header {
   }
 }
 
-.menu-toggle {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
+@media screen and (max-width: 767px) {
+  .menu-toggle {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -258,7 +260,7 @@ header {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .menu-container {
     position: fixed;
     top: 0;
@@ -299,7 +301,7 @@ header {
   fill: #2196F3;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .mobile-nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1086,7 +1088,7 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer-menu form {
     width: 100%;
   }
@@ -1130,30 +1132,6 @@ header {
   fill: currentColor;
 }
 
-.subscribe-input {
-  width: 358px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  padding: 0;
-  padding-left: 16px;
-}
-@media screen and (max-width: 767px) {
-  .subscribe-input {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .subscribe-input {
-    width: 450px;
-  }
-}
-
 .subscribe-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1173,9 +1151,29 @@ header {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .subscribe-label {
     width: 100%;
+  }
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 0;
+  padding-left: 16px;
+}
+@media screen and (max-width: 1199px) {
+  .subscribe-input {
+    width: 100%;
+    max-width: 450px;
   }
 }
 
