@@ -299,7 +299,7 @@ header {
   fill: #2196F3;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .mobile-nav-list {
     display: -webkit-box;
     display: -ms-flexbox;

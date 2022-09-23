@@ -162,7 +162,7 @@ header {
 }
 
 .mobile-nav-list {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 480px) {
         display: flex;
         flex-direction: column;
         gap: 32px;
