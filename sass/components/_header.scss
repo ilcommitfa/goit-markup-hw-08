@@ -127,18 +127,20 @@ header {
 }
 
 .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 48px 0 0 40px;
-    background-color: $primary-white-color;
-    transform: translateX(100%);
-    transition: transform $animation;
-    z-index: 999;
-    overflow: hidden;
-
+    @media screen and (max-width: 480px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 0 0 40px;
+        background-color: $primary-white-color;
+        transform: translateX(100%);
+        transition: transform $animation;
+        z-index: 999;
+        overflow: hidden;
+    }
+    
     @media screen and (min-width: 768px) {
         display: none;
     }
