@@ -727,19 +727,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  .benefits-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 @media screen and (min-width: 768px) {
   .benefits-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
   }
 }
 
@@ -755,12 +755,18 @@ header {
         flex-basis: calc((100% - 90px) / 4);
   }
 }
+
 .benefits-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .benefits-title {
+    text-align: center;
+  }
 }
 
 .benefits-item {
