@@ -207,10 +207,20 @@ header {
 
 .mobile-social-list {
     display: flex;
-    gap: 20px;
+    // gap: 20px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: $accent-color;
+
+    @media screen and (max-width: 767px) {
+    & li:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    & li:not(:first-child) {
+        padding-left: 10px;
+        }
+    }
 }

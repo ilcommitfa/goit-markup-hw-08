@@ -25,11 +25,13 @@
 
 .team-list {
     display: flex;
-    flex-direction: column;
     gap: 30px;
 
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
     @media screen and (min-width: 768px) {
-        flex-direction: row;
         flex-wrap: wrap;
     }
 }

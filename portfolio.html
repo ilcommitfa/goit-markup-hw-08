@@ -25,6 +25,59 @@
       <div class="container container-header">
         <nav class="site-nav">
           <a class="logo" href="./"><span class="logo-start">Web</span>Studio</a>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-nav-list">
+              <li><a class="mobile-nav-link" href="./index.html">Студія</a></li>
+              <li><a class="mobile-nav-link active" href="">Портфоліо</a></li>
+              <li><a class="mobile-nav-link" href="">Контакти</a></li>
+            </ul>
+            <ul class="mobile-contacts-list">
+              <li>
+                <a class="mobile-contacts-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li>
+                <a class="mobile-contacts-email" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-social-list">
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
           <ul class="site-nav-list">
             <li><a class="site-nav-link" href="./index.html">Студія</a></li>
             <li><a class="site-nav-link active" href="">Портфоліо</a></li>
@@ -76,7 +129,7 @@
             <li>
               <a href="" class="project-link">
                 <div class="overlay">
-                  <img src="./images/example1.jpg" alt="Першиий проект" width="370" height="294" />
+                  <img src="./images/example1.jpg" alt="Перший проект" width="370" height="294" />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -306,8 +359,13 @@
         <form>
           <h4 class="footer-title">Підпишіться на розсилку</h4>
           <div class="subscribe-thumb">
-            <label>
-              <input type="email" name="subscribe-email" placeholder="E-mail" class="subscribe-input" />
+            <label class="subscribe-label">
+              <input
+                type="email"
+                name="subscribe-email"
+                placeholder="E-mail"
+                class="subscribe-input"
+              />
             </label>
             <button type="submit" class="btn-subscribe">
               Підписатися
@@ -319,5 +377,12 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
