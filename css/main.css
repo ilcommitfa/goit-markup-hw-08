@@ -301,22 +301,20 @@ header {
   fill: #2196F3;
 }
 
-@media screen and (max-width: 767px) {
-  .mobile-nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 32px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 200px;
-  }
+.mobile-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 180px;
 }
 
 .mobile-contacts-list {
@@ -360,6 +358,8 @@ header {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
   .mobile-social-list li:not(:last-child) {

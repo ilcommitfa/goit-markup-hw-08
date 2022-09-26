@@ -141,7 +141,7 @@ header {
         transition: transform $animation;
         z-index: 999;
         overflow: hidden;
-    }
+        }
     
     @media screen and (min-width: 768px) {
         display: none;
@@ -164,17 +164,15 @@ header {
 }
 
 .mobile-nav-list {
-    @media screen and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        margin-bottom: 200px;
-    }
-}  
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 180px;
+}
 
 .mobile-contacts-list {
     display: flex;
@@ -207,13 +205,13 @@ header {
 
 .mobile-social-list {
     display: flex;
-    // gap: 20px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: $accent-color;
-
+    flex-wrap: wrap;
+    
     @media screen and (max-width: 767px) {
     & li:not(:last-child) {
         padding-right: 10px;
