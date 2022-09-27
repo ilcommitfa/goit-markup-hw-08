@@ -484,7 +484,7 @@ header {
   background-color: #FFFFFF;
   padding: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     position: absolute;
     top: 50%;
@@ -528,7 +528,7 @@ header {
 .btn-modal-close:hover, .btn-modal-close:focus {
   fill: #2196F3;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .btn-modal-close {
     top: 101px;
     right: 23px;
@@ -668,10 +668,16 @@ header {
   letter-spacing: 0.03em;
   color: #757575;
 }
+.checkbox-text:first-child {
+  margin-left: 35px;
+}
 @media screen and (max-width: 1199px) {
   .checkbox-text {
     font-size: 12px;
     line-height: 1.16;
+  }
+  .checkbox-text:first-child {
+    margin-left: 23px;
   }
 }
 
@@ -685,12 +691,6 @@ header {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  margin-left: 35px;
-}
-@media screen and (max-width: 1199px) {
-  .checkbox {
-    margin-left: 23px;
-  }
 }
 
 .checkbox-label {
@@ -699,10 +699,8 @@ header {
 
 .icon-checkbox {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 12px;
-  width: 16px;
-  height: 15px;
   fill: #FFFFFF;
   border: 2px solid #212121;
   border-radius: 2px;
